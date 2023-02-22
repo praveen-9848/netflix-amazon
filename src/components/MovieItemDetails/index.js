@@ -20,7 +20,7 @@ const apiStatusConstants = {
   inProgress: 'IN_PROGRESS',
 }
 
-class MovieDetailView extends Component {
+class MovieItemDetails extends Component {
   state = {
     apiStatus: apiStatusConstants.initial,
     movieDetails: [],
@@ -38,6 +38,7 @@ class MovieDetailView extends Component {
     const {match} = this.props
     const {params} = match
     const {id} = params
+
     const jwtToken = Cookies.get('jwt_token')
     const apiUrl = `https://apis.ccbp.in/movies-app/movies/${id}`
     const options = {
@@ -47,6 +48,7 @@ class MovieDetailView extends Component {
       method: 'GET',
     }
     const response = await fetch(apiUrl, options)
+    console.log(response)
     if (response.ok === true) {
       const data = await response.json()
       const updatedData = [data.movie_details].map(each => ({
@@ -62,7 +64,7 @@ class MovieDetailView extends Component {
         runtime: each.runtime,
         posterPath: each.poster_path,
       }))
-      // console.log(updatedData)
+      console.log(updatedData)
       const genresData = data.movie_details.genres.map(each => ({
         id: each.id,
         name: each.name,
@@ -158,7 +160,7 @@ class MovieDetailView extends Component {
         </div>
         <div className="additional-movie-info-container additional-info-sm-container">
           <ul className="each-genre-ul-container">
-            <h1 className="movie-info-genre-heading">Genres</h1>
+            <h1 className="movie-info-genre-heading">genres</h1>
             {genres.map(eachGenre => (
               <li className="movie-info-each-genre" key={eachGenre.id}>
                 {eachGenre.name}
@@ -247,4 +249,4 @@ class MovieDetailView extends Component {
     )
   }
 }
-export default MovieDetailView
+export default MovieItemDetails

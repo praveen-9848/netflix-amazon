@@ -28,22 +28,6 @@ const HomePoster = props => {
           </button>
         </div>
       </div>
-      {/* <div
-        className="lg-devices"
-        style={{
-          backgroundImage: `url(${backdropPath})`,
-          backgroundSize: '100% 100%',
-          height: '100%',
-        }}
-      >
-        <div className="heading-container">
-          <h1 className="home-poster-title">{title}</h1>
-          <p className="home-poster-overview">{overview}</p>
-          <button className="home-poster-play-btn" type="button">
-            Play
-          </button>
-        </div>
-      </div> */}
     </>
   )
 }

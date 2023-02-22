@@ -1,5 +1,3 @@
-import './index.css'
-
 const MovieDetail = props => {
   const {movieDetails} = props
   const {
@@ -11,7 +9,7 @@ const MovieDetail = props => {
     overview,
     posterPath,
   } = movieDetails
-  //  console.log(posterPath)
+  console.log(posterPath)
   //  console.log(backdropPath)
   const hours = Math.floor(runtime / 60)
   const minutes = runtime % 60
