@@ -23,7 +23,7 @@ const Account = props => {
         <h1 className="account-heading">Account</h1>
         <hr className="hr-line" />
         <div className="member-details-container">
-          <p className="membership-heading">Membership</p>
+          <p className="membership-heading">Member ship</p>
           <div>
             <p className="membership-email">{username}@gmail.com</p>
             <p className="membership-password">Password:{password}</p>

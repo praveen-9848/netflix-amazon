@@ -80,6 +80,7 @@ class Header extends Component {
               </li>
             </Link>
           </ul>
+
           <div className="search-container">
             {showSearchBar && (
               <input
