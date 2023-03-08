@@ -1,3 +1,21 @@
+.app-logo {
+  height: 27px;
+  width: 100px;
+  left: 32px;
+  top: 24px;
+  border-radius: 0px;
+}
+
+@media screen and (min-width: 786px) {
+  .app-logo {
+    height: 39px;
+    width: 135.00051879882812px;
+    left: 165px;
+    top: 32px;
+    border-radius: 0px;
+  }
+}
+
 .navbar-bg-color {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -73,11 +91,21 @@
     display: none;
   }
 }
+
 .nav-container {
   background-color: #13131330;
-  min-height: 75px;
+  min-height: 25px;
   padding: 15px;
 }
+
+@media screen and (min-width: 786px) {
+  .nav-container {
+    background-color: #13131330;
+    min-height: 75px;
+    padding: 15px;
+  }
+}
+
 .nav-elements-container {
   display: flex;
   justify-content: space-between;
